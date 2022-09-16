@@ -1,0 +1,50 @@
+﻿@*@model Datos.Datos.Orders*@
+    @model Principal.ViewModels.EmployeesOrdersViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Orders</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().OrderDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Orders.FirstOrDefault().OrderDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Customers.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Orders.FirstOrDefault().Customers.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Employees.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Orders.FirstOrDefault().Employees.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().shippers.shipperName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Orders.FirstOrDefault().shippers.shipperName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
